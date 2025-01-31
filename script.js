@@ -16,3 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
    
 });
+
+let more = document.querySelectorAll('.more');
+console.log('more', more)
+
+for (let i = 0; i < more.length; i++) {
+    more[i].addEventListener('click', function () {
+        console.log('clicked', i)
+        main_container.innerHTML = '';
+        for (let i = 0; i < more.length; i++) {
+            more[i].classList.remove('flip-card:hover');
+        }
+        more[i].classList.toggle('flip-card:hover');
+    })
+}
