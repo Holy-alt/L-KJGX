@@ -17,16 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
    
 });
 
-let more = document.querySelectorAll('.more');
-console.log('more', more)
+more_btn = document.querySelectorAll('.more');
+console.log('more_btn', more_btn)
+container = document.querySelectorAll('.class_toogle');
+cancel = document.querySelectorAll('.cancel');
 
-for (let i = 0; i < more.length; i++) {
-    more[i].addEventListener('click', function () {
+for (let i = 0; i < more_btn.length; i++) {
+    more_btn[i].addEventListener('click', function () {
         console.log('clicked', i)
-        main_container.innerHTML = '';
-        for (let i = 0; i < more.length; i++) {
-            more[i].classList.remove('flip-card:hover');
-        }
-        more[i].classList.toggle('flip-card:hover');
+        container[i].classList.toggle('flip-card');
     })
 }
+
+
+for (let i = 0; i < cancel.length; i++) {
+    cancel[i].addEventListener('click', function () {
+        console.log('clicked', i)
+        container[i].classList.toggle('flip-card');
+    })
+}
+
