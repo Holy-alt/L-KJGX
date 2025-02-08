@@ -130,7 +130,7 @@ a {
     transform-style: preserve-3d;
   }
   
-  .flip-card:hover .flip-card-inner {
+  .flip-card .flip-card-inner {
     transform: rotateY(180deg);
   }
   
@@ -162,7 +162,7 @@ a {
 
   .tracklist-container {
     max-width: 500px;
-    max-width: 384px;
+    max-height: 384px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -183,7 +183,7 @@ a {
     list-style: none;
     padding: 0;
     margin: 0;
-    height: 384px;
+    height: 240px;
     overflow: auto;
 }
 

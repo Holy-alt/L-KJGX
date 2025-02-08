@@ -72,7 +72,7 @@
 
     <div class="container mt-5">
       <h1 class="text-center mb-4">Платівки жанру "Альтернатива"</h1>
-      <div class="row">
+      <div class="row" id="albums-container">
         <div class="col-md-4 class_toogle">
           <div class="flip-card-inner">
             <div class="card album-card flip-card-front">
@@ -159,7 +159,7 @@
                       <span class="track-duration">3:33</span>
                     </li>
                   </ul>
-                  <a href="#" class="btn btn-primary order">Оформити замовлення</a>
+                  <p class="btn btn-primary order">Оформити замовлення</з>
                   <p class="btn btn-primary cancel">Закрити</p>
 
                 </div>
@@ -297,5 +297,73 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+    const albums = [
+        {
+            title: "System of a Down",
+            artist: "System of a Down",
+            price: "1600 грн",
+            image: "https://i.scdn.co/image/ab67616d0000b2732dc63e977bd5101072adcef6",
+            tracklist: [
+                ["1", "Suite-Pee", "2:31"],
+                ["2", "Know", "2:56"],
+                ["3", "Sugar", "2:33"],
+                ["4", "Suggestions", "2:44"],
+                ["5", "Spiders", "3:35"],
+                ["6", "Ddevil", "1:43"],
+                ["7", "Soil", "3:25"],
+                ["8", "War?", "2:40"],
+                ["9", "Mind", "6:16"],
+                ["10", "Peephole", "4:06"],
+                ["11", "CUBErt", "1:50"],
+                ["12", "Darts", "2:42"],
+                ["13", "P.L.U.C.K (Politically Lying, Unholy, Cowardly Killers)", "3:33"]
+            ]
+        }
+    ];
+
+    const container = document.getElementById("albums-container");
+
+    albums.forEach(album => {
+        const card = document.createElement("div");
+        card.classList.add("col-md-4", "class_toogle");
+
+        card.innerHTML = `
+            <div class="flip-card-inner">
+                <div class="card album-card flip-card-front">
+                    <img src="${album.image}" class="card-img-top" alt="${album.title}" />
+                    <div class="card-body">
+                        <h5 class="card-title">${album.title}</h5>
+                        <p class="card-text">${album.artist}</p>
+                        <p class="card-text">${album.price}</p>
+                        <p class="btn btn-primary more">Детальніше</p>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <div class="card-body">
+                        <div class="tracklist-container">
+                            <h2 class="album-title">${album.title}</h2>
+                            <ul class="tracklist">
+                                ${album.tracklist.map(track => `
+                                    <li class="track">
+                                        <span class="track-number">${track[0]}</span>
+                                        <span class="track-name">${track[1]}</span>
+                                        <span class="track-duration">${track[2]}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                            <p class="btn btn-primary order">Оформити замовлення</p>
+                            <p class="btn btn-primary cancel">Закрити</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(card);
+    });
+});
+    </script>
   </body>
 </html>
