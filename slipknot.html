@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Музичні Платівки</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <style>
+      .album-card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+      .album-card:hover {
+        transform: scale(1.05);
+      }
+      .album-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .album-card .card-body {
+        text-align: center;
+        
+      }
+      footer {
+        background: #343a40;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="fixed-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Вінілові платівки</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Перемикання навігації"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto link_bar">
+              <li class="nav-item">
+                <a class="link" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Контакти</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="about.html">Про нас</a>
+              </li>
+            
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Платівки гурту "Slipknot"</h1>
+      <div class="row" id="albums-container">
+        
+
+       
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const albums = [
+    {
+        title: "Slipknot",
+        artist: "Slipknot",
+        price: "1500 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/thumb/a/a0/Slipknot_Cover_1999.jpg/640px-Slipknot_Cover_1999.jpg",
+        tracklist: [
+            ["1", "742617000027", "0:36"],
+            ["2", "(sic)", "3:19"],
+            ["3", "Eyeless", "3:56"],
+            ["4", "Wait and Bleed", "2:27"],
+            ["5", "Surfacing", "3:38"],
+            ["6", "Spit It Out", "2:39"],
+            ["7", "Tattered & Torn", "2:54"],
+            ["8", "Me Inside", "2:39"],
+            ["9", "Liberate", "3:06"],
+            ["10", "Prosthetics", "4:58"],
+            ["11", "No Life", "2:47"],
+            ["12", "Diluted", "3:23"],
+            ["13", "Only One", "2:26"],
+            ["14", "Scissors", "8:23"]]
+    },
+    {
+        title: "Iowa",
+        artist: "Slipknot",
+        price: "1600 грн",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ0zn7Wd7Zgo75wFlcms-M8dodAI9tP5EGKg&s",
+        tracklist: [
+            ["1", "(515)", "0:59"],
+            ["2", "People = Shit", "3:35"],
+            ["3", "Disasterpiece", "5:08"],
+            ["4", "My Plague", "3:40"],
+            ["5", "Everything Ends", "4:14"],
+            ["6", "The Heretic Anthem", "4:14"],
+            ["7", "Gently", "4:54"],
+            ["8", "Left Behind", "4:01"],
+            ["9", "The Shape", "3:37"],
+            ["10", "I Am Hated", "2:37"],
+            ["11", "Skin Ticket", "6:41"],
+            ["12", "New Abortion", "3:37"],
+            ["13", "Metabolic", "3:58"],
+            ["14", "Iowa", "15:03"]
+        ]
+    },
+    {
+        title: "Vol. 3: (The Subliminal Verses)",
+        artist: "Slipknot",
+        price: "1200 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/0/07/Slipknot_vol_3.jpg",
+        tracklist: [
+            ["1", "Prelude 3.0", "3:57"],
+            ["2", "The Blister Exists", "5:19"],
+            ["3", "Three Nil", "4:48"],
+            ["4", "Duality", "4:12"],
+            ["5", "Opium of the People", "3:12"],
+            ["6", "Circle", "4:22"],
+            ["7", "Welcome", "3:15"],
+            ["8", "Vermilion", "5:16"],
+            ["9", "Pulse of the Maggots", "4:19"],
+            ["10", "Before I Forget", "4:38"],
+            ["11", "Vermilion Pt. 2", "3:44"],
+            ["12", "The Nameless", "4:28"],
+            ["13", "The Virus of Life", "5:25"],
+            ["14", "Danger – Keep Away", "3:13"]
+        ]
+    },
+    {
+        title: "All Hope Is Gone",
+        artist: "Slipknot",
+        price: "1900 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/1/16/All_Hope_Is_Gone.png",
+        tracklist: [
+            ["1", ".execute.", "1:49"],
+            ["2", "Gematria (The Killing Name)", "6:02"],
+            ["3", "Sulfur", "4:37"],
+            ["4", "Psychosocial", "4:43"],
+            ["5", "Dead Memories", "4:28"],
+            ["6", "Vendetta", "5:15"],
+            ["7", "Butcher’s Hook", "4:14"],
+            ["8", "Gehenna", "6:53"],
+            ["9", "This Cold Black", "4:40"],
+            ["10", "Wherein Lies Continue", "5:37"],
+            ["11", "Snuff", "4:36"],
+            ["12", "All Hope Is Gone", "4:45"]
+        ]
+    },
+    {
+        title: ".5: The Gray Chapter",
+        artist: "Slipknot",
+        price: "1700 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/1/19/5_The_Gray_Chapter.jpg",
+        tracklist: [
+            ["1", "XIX", "3:10"],
+            ["2", "Sarcastrophe", "5:06"],
+            ["3", "AOV", "5:33"],
+            ["4", "The Devil in I", "5:42"],
+            ["5", "Killpop", "3:45"],
+            ["6", "Skeptic", "4:47"],
+            ["7", "Lech", "4:50"],
+            ["8", "Goodbye", "4:35"],
+            ["9", "Nomadic", "4:18"],
+            ["10", "The One That Kills the Least", "4:11"],
+            ["11", "Custer", "4:14"],
+            ["12", "Be Prepared for Hell", "1:58"],
+            ["13", "The Negative One", "5:25"],
+            ["14", "If Rain Is What You Want", "6:21"]
+        ]
+    },
+    {
+        title: "We Are Not Your Kind",
+        artist: "Slipknot",
+        price: "1300 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/1/18/Slipknot_-_We_Are_Not_Your_Kind.png",
+        tracklist: [
+            ["1", "Insert Coin", "1:38"],
+            ["2", "Unsainted", "4:20"],
+            ["3", "Birth of the Cruel", "4:35"],
+            ["4", "Death Because of Death", "1:20"],
+            ["5", "Nero Forte", "5:15"],
+            ["6", "Critical Darling", "6:25"],
+            ["7", "A Liar’s Funeral", "5:27"],
+            ["8", "Red Flag", "4:11"],
+            ["9", "What’s Next", "0:53"],
+            ["10", "Spiders", "4:03"],
+            ["11", "Orphan", "6:01"],
+            ["12", "My Pain", "6:48"],
+            ["13", "Not Long for This World", "6:35"],
+            ["14", "Solway Firth", "6:36"]
+        ]
+    },
+    {
+        title: "The End, So Far",
+        artist: "Slipknot",
+        price: "1500 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/9/9b/Slipknot_%E2%80%94_The_End%2C_So_Far.jpg",
+        tracklist: [
+            ["1", "Adderall", "5:41"],
+            ["2", "The Dying Song (Time to Sing)", "3:23"],
+            ["3", "The Chapeltown Rag", "4:49"],
+            ["4", "Yen", "4:44"],
+            ["5", "Hivemind", "5:16"],
+            ["6", "Warranty", "3:51"],
+            ["7", "Medicine for the Dead", "6:15"],
+            ["8", "Acidic", "4:50"],
+            ["9", "Heirloom", "3:29"],
+            ["10", "H377", "4:23"],
+            ["11", "De Sade", "5:39"],
+            ["12", "Finale", "5:07"]
+        ]
+    }
+];
+
+  
+  
+        const container = document.getElementById("albums-container");
+
+albums.forEach((album, index) => {
+    const card = document.createElement("div");
+    card.classList.add("col-md-4", "class_toogle", "demo-card");
+
+    card.innerHTML = `
+    <div class="flip-card-inner">
+        <div class="card album-card flip-card-front">
+            <img src="${album.image}" class="card-img-top" alt="${album.title}" />
+            <div class="card-body">
+                <h5 class="card-title">${album.title}</h5>
+                <p class="card-text">${album.artist}</p>
+                <p class="card-text">${album.price}</p>
+                <p class="btn btn-primary more">Детальніше</p>
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <div class="card-body">
+                <div class="tracklist-container">
+                    <h2 class="album-title">${album.title}</h2>
+                    <ul class="tracklist">
+                        ${album.tracklist.map(track => `
+                            <li class="track">
+                                <span class="track-number">${track[0]}</span>
+                                <span class="track-name">${track[1]}</span>
+                                <span class="track-duration">${track[2]}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                    <p class="btn btn-primary order" data-index="${index}">Оформити замовлення</p>
+                    <p class="btn btn-primary cancel">Закрити</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+
+    container.appendChild(card);
+});
+
+
+document.querySelectorAll(".more").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+
+document.querySelectorAll(".cancel").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+
+document.querySelectorAll(".order").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        const index = event.target.getAttribute("data-index");
+        const selectedAlbum = albums[index];
+
+        localStorage.setItem("orderData", JSON.stringify(selectedAlbum));
+        window.location.href = "order.html";
+    });
+});
+});
+  
+    </script>
+  </body>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Контактна інформація</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p><strong>Телефони:</strong></p>
+                <p>📞 +38 (093) 123-45-67</p>
+                <p>📞 +38 (097) 765-43-21</p>
+                <hr>
+                <p><strong>Соцмережі:</strong></p>
+                <p>
+                    <a href="https://facebook.com" target="_blank" class="btn btn-primary btn-sm">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="btn btn-danger btn-sm">Instagram</a>
+                    <a href="https://twitter.com" target="_blank" class="btn btn-info btn-sm">Twitter</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

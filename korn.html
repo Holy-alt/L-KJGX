@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Музичні Платівки</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <style>
+      .album-card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+      .album-card:hover {
+        transform: scale(1.05);
+      }
+      .album-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .album-card .card-body {
+        text-align: center;
+        
+      }
+      footer {
+        background: #343a40;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header class="fixed-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Вінілові платівки</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Перемикання навігації"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto link_bar">
+              <li class="nav-item">
+                <a class="link" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Контакти</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="about.html">Про нас</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Платівки гурту "Korn"</h1>
+      <div class="row" id="albums-container">
+        
+
+       
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const albums = [
+    {
+        title: "Korn",
+        artist: "Korn",
+        price: "1600 грн",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxXZFYlC7XZdWUO5CChG6FyQGvI1kE7knDTw&",
+        tracklist: [
+            ["1", "Blind", "4:19"],
+            ["2", "Ball Tongue", "4:29"],
+            ["3", "Need To", "4:01"],
+            ["4", "Clown", "4:36"],
+            ["5", "Divine", "2:51"],
+            ["6", "Faget", "5:49"],
+            ["7", "Shoots and Ladders", "5:22"],
+            ["8", "Predictable", "4:32"],
+            ["9", "Fake", "4:51"],
+            ["10", "Lies", "3:22"],
+            ["11", "Helmet in the Bush", "4:02"],
+            ["12", "Daddy", "17:31"]
+        ]
+    },
+    {
+        title: "Life Is Peachy",
+        artist: "Korn",
+        price: "1600 грн",
+        image: "https://upload.wikimedia.org/wikipedia/uk/0/03/Korn-LifeIsPeachy.jpg",
+        tracklist: [
+            ["1", "Twist", "0:49"],
+            ["2", "Chi", "3:55"],
+            ["3", "Lost", "2:55"],
+            ["4", "Swallow", "3:38"],
+            ["5", "Porno Creep", "2:01"],
+            ["6", "Good God", "3:20"],
+            ["7", "Mr. Rogers", "5:10"],
+            ["8", "K@#%!", "3:02"],
+            ["9", "No Place to Hide", "3:31"],
+            ["10", "Wicked", "4:00"],
+            ["11", "A.D.I.D.A.S.", "2:32"],
+            ["12", "Lowrider", "0:58"],
+            ["13", "Ass Itch", "3:39"],
+            ["14", "Kill You", "8:37"]
+        ]
+    },
+    {
+        title: "Follow the Leader",
+        artist: "Korn",
+        price: "1900 грн",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRePUIz9paqqLvGWYPHgdvIPpOftCXZ4isG0w&s",
+        tracklist: [
+            ["1", "It's On!", "4:28"],
+            ["2", "Freak on a Leash", "4:15"],
+            ["3", "Got the Life", "3:45"],
+            ["4", "Dead Bodies Everywhere", "4:44"],
+            ["5", "Children of the Korn", "3:52"],
+            ["6", "B.B.K.", "3:56"],
+            ["7", "Pretty", "4:12"],
+            ["8", "All in the Family", "4:48"],
+            ["9", "Reclaim My Place", "4:07"],
+            ["10", "Justin", "4:17"],
+            ["11", "Seed", "5:55"],
+            ["12", "Cameltosis", "4:38"],
+            ["13", "My Gift to You", "15:40"]
+        ]
+    },
+    {
+        title: "Issues",
+        artist: "Korn",
+        price: "1200 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/3/31/Korn-issues.jpg",
+        tracklist: [
+            ["1", "Dead", "1:12"],
+            ["2", "Falling Away from Me", "4:30"],
+            ["3", "Trash", "3:27"],
+            ["4", "4U", "1:42"],
+            ["5", "Beg for Me", "3:53"],
+            ["6", "Make Me Bad", "3:55"],
+            ["7", "It's Gonna Go Away", "1:30"],
+            ["8", "Wake Up", "4:07"],
+            ["9", "Am I Going Crazy", "1:00"],
+            ["10", "Hey Daddy", "3:45"],
+            ["11", "Somebody Someone", "3:47"],
+            ["12", "No Way", "4:09"],
+            ["13", "Let's Get This Party Started", "3:41"],
+            ["14", "Wish You Could Be Me", "1:07"],
+            ["15", "Counting", "3:37"],
+            ["16", "Dirty", "3:43"]
+        ]
+    },
+    {
+        title: "Untouchables",
+        artist: "Korn",
+        price: "1400 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/0/0d/Korn_%E2%80%94_Untouchables.webp",
+        tracklist: [
+            ["1", "Here to Stay", "4:32"],
+            ["2", "Make Believe", "4:37"],
+            ["3", "Blame", "3:51"],
+            ["4", "Hollow Life", "4:09"],
+            ["5", "Bottled Up Inside", "4:00"],
+            ["6", "Thoughtless", "4:32"],
+            ["7", "Hating", "5:10"],
+            ["8", "One More Time", "4:39"],
+            ["9", "Alone I Break", "4:16"],
+            ["10", "Embrace", "4:27"],
+            ["11", "Beat It Upright", "4:15"],
+            ["12", "Wake Up Hate", "3:12"],
+            ["13", "I'm Hiding", "3:56"],
+            ["14", "No One's There", "5:13"]
+        ]
+    },
+    {
+        title: "Take a Look in the Mirror",
+        artist: "Korn",
+        price: "1200 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/f/f9/Korn_-_take_a_look_in_the_mirror.jpg",
+        tracklist: [
+            ["1", "Right Now", "3:15"],
+            ["2", "Break Some Off", "2:35"],
+            ["3", "Counting on Me", "4:49"],
+            ["4", "Here It Comes Again", "3:34"],
+            ["5", "Deep Inside", "2:46"],
+            ["6", "Did My Time", "4:09"],
+            ["7", "Everything I've Known", "3:35"],
+            ["8", "Play Me", "3:26"],
+            ["9", "Alive", "4:30"],
+            ["10", "Let's Do This Now", "3:19"],
+            ["11", "I'm Done", "3:23"],
+            ["12", "Y'all Want a Single", "3:17"],
+            ["13", "When Will This End", "14:23"]
+        ]
+    }
+];
+ 
+  
+  
+        const container = document.getElementById("albums-container");
+
+albums.forEach((album, index) => {
+    const card = document.createElement("div");
+    card.classList.add("col-md-4", "class_toogle", "demo-card");
+
+    card.innerHTML = `
+    <div class="flip-card-inner">
+        <div class="card album-card flip-card-front">
+            <img src="${album.image}" class="card-img-top" alt="${album.title}" />
+            <div class="card-body">
+                <h5 class="card-title">${album.title}</h5>
+                <p class="card-text">${album.artist}</p>
+                <p class="card-text">${album.price}</p>
+                <p class="btn btn-primary more">Детальніше</p>
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <div class="card-body">
+                <div class="tracklist-container">
+                    <h2 class="album-title">${album.title}</h2>
+                    <ul class="tracklist">
+                        ${album.tracklist.map(track => `
+                            <li class="track">
+                                <span class="track-number">${track[0]}</span>
+                                <span class="track-name">${track[1]}</span>
+                                <span class="track-duration">${track[2]}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                    <p class="btn btn-primary order" data-index="${index}">Оформити замовлення</p>
+                    <p class="btn btn-primary cancel">Закрити</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+
+    container.appendChild(card);
+});
+
+
+document.querySelectorAll(".more").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+
+document.querySelectorAll(".cancel").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+
+document.querySelectorAll(".order").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        const index = event.target.getAttribute("data-index");
+        const selectedAlbum = albums[index];
+
+        localStorage.setItem("orderData", JSON.stringify(selectedAlbum));
+        window.location.href = "order.html";
+    });
+});
+});
+  
+    </script>
+  </body>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Контактна інформація</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p><strong>Телефони:</strong></p>
+                <p>📞 +38 (093) 123-45-67</p>
+                <p>📞 +38 (097) 765-43-21</p>
+                <hr>
+                <p><strong>Соцмережі:</strong></p>
+                <p>
+                    <a href="https://facebook.com" target="_blank" class="btn btn-primary btn-sm">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="btn btn-danger btn-sm">Instagram</a>
+                    <a href="https://twitter.com" target="_blank" class="btn btn-info btn-sm">Twitter</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

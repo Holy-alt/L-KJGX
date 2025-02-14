@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Музичні Платівки</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <style>
+      .album-card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+      .album-card:hover {
+        transform: scale(1.05);
+      }
+      .album-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .album-card .card-body {
+        text-align: center;
+        
+      }
+      footer {
+        background: #343a40;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="fixed-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Вінілові платівки</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Перемикання навігації"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto link_bar">
+              <li class="nav-item">
+                <a class="link" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Контакти</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="about.html">Про нас</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Платівки гурту "System of a Down"</h1>
+      <div class="row" id="albums-container">
+        
+
+       
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const albums = [
+          {
+            title: "System of a Down",
+            artist: "System of a Down",
+            price: "1600 грн",
+            image: "https://i.scdn.co/image/ab67616d0000b2732dc63e977bd5101072adcef6",
+            tracklist: [
+              ["1", "Suite-Pee", "2:31"],
+              ["2", "Know", "2:56"],
+              ["3", "Sugar", "2:33"],
+              ["4", "Suggestions", "2:44"],
+              ["5", "Spiders", "3:35"],
+              ["6", "Ddevil", "1:43"],
+              ["7", "Soil", "3:25"],
+              ["8", "War?", "2:40"],
+              ["9", "Mind", "6:16"],
+              ["10", "Peephole", "4:06"],
+              ["11", "CUBErt", "1:50"],
+              ["12", "Darts", "2:42"],
+              ["13", "P.L.U.C.K (Politically Lying, Unholy, Cowardly Killers)", "3:33"]]
+          },
+          {
+            title: "Toxicity",
+            artist: "System of a Down",
+            price: "1800 грн",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp0pP7De3UIAq2_JWjCeiysRqiKpAkSAv6fA&s",
+            tracklist: [
+              ["1", "Prison song", "3:21"],
+              ["2", "Needles", "3:13"],
+              ["3", "Deer dance", "2:55"],
+              ["4", "Jet pilot", "2:06"],
+              ["5", "X", "1:58"],
+              ["6", "Chop suey!", "3:30"],
+              ["7", "Bounce", "1:54"],
+              ["8", "Forest", "4:00"],
+              ["9", "Atwa", "2:56"],
+              ["10", "Science", "2:42"],
+              ["11", "Shimmy", "1:51"],
+              ["12", "Toxicity", "3:39"],
+              ["13", "Psycho", "3:45"],
+              ["14", "Aerials", "3:53"],
+              ["15", "Arto", "2:12"]]
+          },
+          {
+            title: "Steal This Album!",
+            artist: "System of a Down",
+            price: "1890 грн",
+            image: "https://upload.wikimedia.org/wikipedia/uk/1/1e/Stealthisalbum.jpg",
+            tracklist: [
+              ["1", "chic `n` Stu", "2:23"],
+              ["2", "Innervision", "2:33"],
+              ["3", "Bubbles", "1:56"],
+              ["4", "Boom!", "2:14"],
+              ["5", "Nüguns", "2:30"],
+              ["6", "A.D.D.", "3:17"],
+              ["7", "Mr. Jack", "4:09"],
+              ["8", "I-E-A-I-A-I-O", "3:08"],
+              ["9", "36", "0:46"],
+              ["10", "Pictures", "2:06"],
+              ["11", "Highway Song", "3:13"],
+              ["12", "Fuck the System", "2:12"],
+              ["13", "Ego Brain", "3:21"],
+              ["14", "Thetawaves", "2:36"],
+              ["15", "Roulette", "3:21"],
+              ["16", "Streamline", "3:37"]]
+          },
+          {
+            title: "Mezmerize",
+            artist: "System of a Down",
+            price: "1220 грн",
+            image: "https://upload.wikimedia.org/wikipedia/ru/9/97/Mezmerize.jpg",
+            tracklist: [
+              ["1", "Soldier Side(intro)", "1:03"],
+              ["2", "B.Y.O.B", "4:15"],
+              ["3", "Revenga", "3:48"],
+              ["4", "Cigaro", "2:11"],
+              ["5", "Radio/Video", "4:09"],
+              ["6", "This Cocaine Makes Me Fell Like I'm on This Song", "2:08"],
+              ["7", "Violent Pornography", "3:31"],
+              ["8", "Question!", "3:20"],
+              ["9", "Sad Statue", "3:25"],
+              ["10", "Old School Hollywood", "2:56"],
+              ["11", "Lost in Hollywood", "5:20"]]
+          },
+          {
+            title: "Hypnotize",
+            artist: "System of a Down",
+            price: "1300 грн",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLVM7YT_eA1k8yUuE968XVL0DV70J1zAy56w&s",
+            tracklist: [
+              ["1", "Attack", "3:06"],
+              ["2", "Dreaming", "3:59"],
+              ["3", "Kill Rock'n Roll", "2:28"],
+              ["4", "Hypnotize", "3:09"],
+              ["5", "Stealing Society", "2:58"],
+              ["6", "Tentative", "3:36"],
+              ["7", "U-Fig", "2:55"],
+              ["8", "Holy Mountains", "5:28"],
+              ["9", "Vicinity of Obscenity", "2:51"],
+              ["10", "She's Like Heroin", "2:44"],
+              ["11", "Lonely Day", "2:47"],
+              ["12", "Soldier Side", "3:40"]]
+          },
+        {
+            title: "Storaged Melodies",
+            artist: "System of a Down",
+            price: "2400 грн",
+            image: "https://i1.sndcdn.com/artworks-000227815835-w8ve4v-t1080x1080.jpg",
+            tracklist: [
+              ["1", "Störagéd", "1:22"],
+              ["2", "Marmalade", "3:01"],
+              ["3", "The Metro", "3:21"],
+              ["4", "Johnny", "2:08"],
+              ["5", "Hezze", "4:13"],
+              ["6", "Honey", "2:00"],
+              ["7", "Temper", "2:34"],
+              ["8", "Snowblind", "4:40"],
+              ["9", "Metro", "3:02"],
+              ["10", "Blue", "2:18"],
+              ["11", "Dam", "2:53"],
+              ["12", "Friik", "2:00"],
+              ["13", "Starlit Eyes", "2:57"],
+              ["14", "Patterns", "2:41"],
+              ["15", "Will They Die 4 You", "3:33"],
+              ["16", "Don't Go Off Wandering", "4:02"],
+              ["17", "Mushroom Cult", "3:37"]]
+          },
+        ];
+
+  
+  
+        const container = document.getElementById("albums-container");
+
+albums.forEach((album, index) => {
+    const card = document.createElement("div");
+    card.classList.add("col-md-4", "class_toogle", "demo-card");
+
+    card.innerHTML = `
+    <div class="flip-card-inner">
+        <div class="card album-card flip-card-front">
+            <img src="${album.image}" class="card-img-top" alt="${album.title}" />
+            <div class="card-body">
+                <h5 class="card-title">${album.title}</h5>
+                <p class="card-text">${album.artist}</p>
+                <p class="card-text">${album.price}</p>
+                <p class="btn btn-primary more">Детальніше</p>
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <div class="card-body">
+                <div class="tracklist-container">
+                    <h2 class="album-title">${album.title}</h2>
+                    <ul class="tracklist">
+                        ${album.tracklist.map(track => `
+                            <li class="track">
+                                <span class="track-number">${track[0]}</span>
+                                <span class="track-name">${track[1]}</span>
+                                <span class="track-duration">${track[2]}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                    <p class="btn btn-primary order" data-index="${index}">Оформити замовлення</p>
+                    <p class="btn btn-primary cancel">Закрити</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+
+    container.appendChild(card);
+});
+
+
+document.querySelectorAll(".more").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+
+document.querySelectorAll(".cancel").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+
+document.querySelectorAll(".order").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        const index = event.target.getAttribute("data-index");
+        const selectedAlbum = albums[index];
+
+        localStorage.setItem("orderData", JSON.stringify(selectedAlbum));
+        window.location.href = "order.html";
+    });
+});
+});
+  
+    </script>
+  </body>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Контактна інформація</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p><strong>Телефони:</strong></p>
+                <p>📞 +38 (093) 123-45-67</p>
+                <p>📞 +38 (097) 765-43-21</p>
+                <hr>
+                <p><strong>Соцмережі:</strong></p>
+                <p>
+                    <a href="https://facebook.com" target="_blank" class="btn btn-primary btn-sm">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="btn btn-danger btn-sm">Instagram</a>
+                    <a href="https://twitter.com" target="_blank" class="btn btn-info btn-sm">Twitter</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

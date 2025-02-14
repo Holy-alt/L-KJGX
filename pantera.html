@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Музичні Платівки</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <style>
+      .album-card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+      .album-card:hover {
+        transform: scale(1.05);
+      }
+      .album-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .album-card .card-body {
+        text-align: center;
+        
+      }
+      footer {
+        background: #343a40;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="fixed-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Вінілові платівки</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Перемикання навігації"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto link_bar">
+              <li class="nav-item">
+                <a class="link" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Контакти</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="about.html">Про нас</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Платівки гурту "Pantera"</h1>
+      <div class="row" id="albums-container">
+        
+
+       
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const albums = [
+    {
+        title: "Metal Magic",
+        artist: "Pantera",
+        price: "1500 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/a/aa/PanteraMetalMagic.jpg",
+        tracklist: [
+            ["1", "Ride My Rocket", "4:55"],
+            ["2", "I'll Be Alright", "3:14"],
+            ["3", "Tell Me If You Want It", "3:44"],
+            ["4", "Latest Lover", "2:52"],
+            ["5", "Biggest Part of Me", "4:49"],
+            ["6", "Metal Magic", "4:17"],
+            ["7", "Widowmaker", "3:03"],
+            ["8", "Nothin' On (But the Radio)", "3:31"],
+            ["9", "Sad Lover", "3:27"],
+            ["10", "Rock Out", "5:45"]
+        ]
+    },
+    {
+        title: "Projects in the Jungle",
+        artist: "Pantera",
+        price: "1400 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/c/c3/PanteraProjects.jpg",
+        tracklist: [
+            ["1", "All Over Tonight", "3:36"],
+            ["2", "Out for Blood", "3:10"],
+            ["3", "Blue Light Turnin' Red", "1:39"],
+            ["4", "Like Fire", "4:00"],
+            ["5", "In Over My Head", "3:57"],
+            ["6", "Projects in the Jungle", "3:05"],
+            ["7", "Heavy Metal Rules", "4:18"],
+            ["8", "Only a Heartbeat Away", "4:01"],
+            ["9", "Killers", "3:34"],
+            ["10", "Takin' My Life", "4:31"]
+        ]
+    },
+    {
+        title: "I Am the Night",
+        artist: "Pantera",
+        price: "1600 грн",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-TPVrpR9utllxFh1p8-bFIKY39Q4vti73tw&s",
+        tracklist: [
+            ["1", "Hot and Heavy", "4:06"],
+            ["2", "I Am the Night", "4:28"],
+            ["3", "Onward We Rock!", "3:59"],
+            ["4", "D*G*T*T*M", "1:43"],
+            ["5", "Daughters of the Queen", "4:16"],
+            ["6", "Down Below", "2:38"],
+            ["7", "Come-On Eyes", "4:13"],
+            ["8", "Right on the Edge", "4:05"],
+            ["9", "Valhalla", "3:52"],
+            ["10", "Forever Tonight", "4:10"]
+        ]
+    },
+    {
+        title: "Power Metal",
+        artist: "Pantera",
+        price: "1100 грн",
+        image: "https://upload.wikimedia.org/wikipedia/uk/1/14/Pantera_-_Power_Metal.jpg",
+        tracklist: [
+            ["1", "Rock the World", "3:34"],
+            ["2", "Power Metal", "3:53"],
+            ["3", "We'll Meet Again", "3:54"],
+            ["4", "Over and Out", "5:06"],
+            ["5", "Proud to Be Loud", "4:03"],
+            ["6", "Down Below", "2:38"],
+            ["7", "Death Trap", "4:07"],
+            ["8", "Hard Ride", "4:17"],
+            ["9", "Burnnn!", "3:35"],
+            ["10", "P*S*T*88", "2:53"]
+        ]
+    },
+    {
+        title: "Cowboys from Hell",
+        artist: "Pantera",
+        price: "1450 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/a/a8/CowboysFromHell.jpg",
+        tracklist: [
+            ["1", "Cowboys from Hell", "4:06"],
+            ["2", "Primal Concrete Sledge", "2:13"],
+            ["3", "Psycho Holiday", "5:19"],
+            ["4", "Heresy", "4:47"],
+            ["5", "Cemetery Gates", "7:03"],
+            ["6", "Domination", "5:04"],
+            ["7", "Shattered", "3:21"],
+            ["8", "Clash with Reality", "5:15"],
+            ["9", "Medicine Man", "5:15"],
+            ["10", "Message in Blood", "5:10"],
+            ["11", "The Sleep", "5:47"],
+            ["12", "The Art of Shredding", "4:20"]
+        ]
+    },
+    {
+        title: "Vulgar Display of Power",
+        artist: "Pantera",
+        price: "1300 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/1/12/PanteraVulgarDisplayofPower.jpg",
+        tracklist: [
+            ["1", "Mouth for War", "3:56"],
+            ["2", "A New Level", "3:57"],
+            ["3", "Walk", "5:15"],
+            ["4", "Fucking Hostile", "2:49"],
+            ["5", "This Love", "6:32"],
+            ["6", "Rise", "4:36"],
+            ["7", "No Good (Attack the Radical)", "4:49"],
+            ["8", "Live in a Hole", "5:00"],
+            ["9", "Regular People (Conceit)", "5:27"],
+            ["10", "By Demons Be Driven", "4:39"],
+            ["11", "Hollow", "5:45"]
+        ]
+    },
+    {
+        title: "Far Beyond Driven",
+        artist: "Pantera",
+        price: "1300 грн",
+        image: "https://upload.wikimedia.org/wikipedia/ru/d/d3/Pantera-FarBeyondDriven.jpg",
+        tracklist: [
+            ["1", "Strength Beyond Strength", "3:39"],
+            ["2", "Becoming", "3:05"],
+            ["3", "5 Minutes Alone", "5:50"],
+            ["4", "I'm Broken", "4:25"],
+            ["5", "Good Friends and a Bottle of Pills", "2:52"],
+            ["6", "Hard Lines, Sunken Cheeks", "7:01"],
+            ["7", "Slaughtered", "3:57"],
+            ["8", "25 Years", "6:05"],
+            ["9", "Shedding Skin", "5:36"],
+            ["10", "Use My Third Arm", "4:52"],
+            ["11", "Throes of Rejection", "5:01"],
+            ["12", "Planet Caravan", "4:04"]
+        ]
+    }
+];
+
+  
+  
+        const container = document.getElementById("albums-container");
+
+albums.forEach((album, index) => {
+    const card = document.createElement("div");
+    card.classList.add("col-md-4", "class_toogle", "demo-card");
+
+    card.innerHTML = `
+    <div class="flip-card-inner">
+        <div class="card album-card flip-card-front">
+            <img src="${album.image}" class="card-img-top" alt="${album.title}" />
+            <div class="card-body">
+                <h5 class="card-title">${album.title}</h5>
+                <p class="card-text">${album.artist}</p>
+                <p class="card-text">${album.price}</p>
+                <p class="btn btn-primary more">Детальніше</p>
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <div class="card-body">
+                <div class="tracklist-container">
+                    <h2 class="album-title">${album.title}</h2>
+                    <ul class="tracklist">
+                        ${album.tracklist.map(track => `
+                            <li class="track">
+                                <span class="track-number">${track[0]}</span>
+                                <span class="track-name">${track[1]}</span>
+                                <span class="track-duration">${track[2]}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                    <p class="btn btn-primary order" data-index="${index}">Оформити замовлення</p>
+                    <p class="btn btn-primary cancel">Закрити</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+
+    container.appendChild(card);
+});
+
+
+document.querySelectorAll(".more").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+
+document.querySelectorAll(".cancel").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+
+document.querySelectorAll(".order").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        const index = event.target.getAttribute("data-index");
+        const selectedAlbum = albums[index];
+
+        localStorage.setItem("orderData", JSON.stringify(selectedAlbum));
+        window.location.href = "order.html";
+    });
+});
+});
+  
+    </script>
+  </body>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Контактна інформація</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p><strong>Телефони:</strong></p>
+                <p>📞 +38 (093) 123-45-67</p>
+                <p>📞 +38 (097) 765-43-21</p>
+                <hr>
+                <p><strong>Соцмережі:</strong></p>
+                <p>
+                    <a href="https://facebook.com" target="_blank" class="btn btn-primary btn-sm">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="btn btn-danger btn-sm">Instagram</a>
+                    <a href="https://twitter.com" target="_blank" class="btn btn-info btn-sm">Twitter</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

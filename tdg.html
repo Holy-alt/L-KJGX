@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Музичні Платівки</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <style>
+      .album-card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+      .album-card:hover {
+        transform: scale(1.05);
+      }
+      .album-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .album-card .card-body {
+        text-align: center;
+        
+      }
+      footer {
+        background: #343a40;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="fixed-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Вінілові платівки</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Перемикання навігації"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto link_bar">
+              <li class="nav-item">
+                <a class="link" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Контакти</a>
+              </li>
+              <li class="nav-item">
+                <a class="link" href="about.html">Про нас</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Платівки гурту "Three Days Grace"</h1>
+      <div class="row" id="albums-container">
+        
+
+       
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const albums = [
+          {
+            title: "Three Days Grace",
+            artist: "Three Days Grace",
+            price: "1870 грн",
+            image: "https://upload.wikimedia.org/wikipedia/ru/thumb/a/ad/ThreeDaysGrace--ThreeDaysGrace.jpg/274px-ThreeDaysGrace--ThreeDaysGrace.jpg",
+            tracklist: [
+              ["1", "Burn", "4:28"],
+              ["2", "Just Like You", "3:07"],
+              ["3", "I Hate Everything About You", "3:52"],
+              ["4", "Home", "3:45"],
+              ["5", "Scared", "3:13"],
+              ["6", "Let You Down", "3:48"],
+              ["7", "Now or Never", "3:01"],
+              ["8", "Born Like This", "3:32"],
+              ["9", "Drown", "3:27"],
+              ["10", "Wake Up", "3:25"],
+              ["11", "Take Me Under", "4:18"],
+              ["12", "Overrated", "3:31"]]  
+          },
+          {
+            title: "One-X",
+            artist: "Three Days Grace",
+            price:"1500 грн",
+            image: "https://upload.wikimedia.org/wikipedia/ru/c/cf/One_X.png",
+            tracklist: [
+              ["1", "It's All Over", "2:47"],
+              ["2", "Animal I Have Become", "3:51"],
+              ["3", "Pain", "3:23"],
+              ["4", "Never Too Late", "3:29"],
+              ["5", "On My Own", "3:05"],
+              ["6", "Riot", "3:27"],
+              ["7", "Get Out Alive", "4:22"],
+              ["8", "Let It Die", "3:09"],
+              ["9", "Over and Over", "3:12"],
+              ["10", "Time of Dying", "3:08"],
+              ["11", "Gone Forever", "3:41"],
+              ["12", "One-X", "4:46"]]
+          },
+          {
+            title: "Life Starts Now",
+            artist: "Three Days Grace",
+            price:"1700 грн",
+            image: "https://upload.wikimedia.org/wikipedia/ru/6/68/Life_starts_now.jpg",
+            tracklist: [
+              ["1", "Bitter Taste", "4:01"],
+              ["2", "Break", "3:14"],
+              ["3", "World so Cold", "4:03"],
+              ["4", "Lost in You", "3:53"],
+              ["5", "The Good Life", "2:54"],
+              ["6", "No More", "3:46"],
+              ["7", "Last to Know", "3:28"],
+              ["8", "Someone Who Cares", "4:53"],
+              ["9", "Bully", "3:39"],
+              ["10", "Without You", "3:34"],
+              ["11", "Goin'Down", "3:06"],
+              ["12", "Life Starts Now", "3:09"]]   
+          },
+          {
+            title: "Human",
+            artist: "Three Days Grace",
+            price: "1550 грн",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzh9JmWuH9C8ln7uob6rdcHeNTwGSQqBRL6w&s",
+            tracklist: [
+              ["1", "Human Race", "4:28"],
+              ["2", "Painkiller", "3:07"],
+              ["3", "Fallen Angel", "3:52"],
+              ["4", "Landmine", "3:45"],
+              ["5", "Tell Me Why", "3:13"],
+              ["6", "I Am Machine", "3:48"],
+              ["7", "So What", "3:01"],
+              ["8", "Car Crash", "3:32"],
+              ["9", "Nothing's Fair in Love and War", "3:27"],
+              ["10", "One Too Many", "3:25"],
+              ["11", "The End is Not The Answer", "4:18"],
+              ["12", "The Real You", "3:31"]]  
+          },
+        ];
+            
+
+  
+  
+        const container = document.getElementById("albums-container");
+
+albums.forEach((album, index) => {
+    const card = document.createElement("div");
+    card.classList.add("col-md-4", "class_toogle", "demo-card");
+
+    card.innerHTML = `
+    <div class="flip-card-inner">
+        <div class="card album-card flip-card-front">
+            <img src="${album.image}" class="card-img-top" alt="${album.title}" />
+            <div class="card-body">
+                <h5 class="card-title">${album.title}</h5>
+                <p class="card-text">${album.artist}</p>
+                <p class="card-text">${album.price}</p>
+                <p class="btn btn-primary more">Детальніше</p>
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <div class="card-body">
+                <div class="tracklist-container">
+                    <h2 class="album-title">${album.title}</h2>
+                    <ul class="tracklist">
+                        ${album.tracklist.map(track => `
+                            <li class="track">
+                                <span class="track-number">${track[0]}</span>
+                                <span class="track-name">${track[1]}</span>
+                                <span class="track-duration">${track[2]}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                    <p class="btn btn-primary order" data-index="${index}">Оформити замовлення</p>
+                    <p class="btn btn-primary cancel">Закрити</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+
+    container.appendChild(card);
+});
+
+
+document.querySelectorAll(".more").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+
+document.querySelectorAll(".cancel").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".class_toogle")[index].classList.toggle("flip-card");
+    });
+});
+
+document.querySelectorAll(".order").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        const index = event.target.getAttribute("data-index");
+        const selectedAlbum = albums[index];
+
+        localStorage.setItem("orderData", JSON.stringify(selectedAlbum));
+        window.location.href = "order.html";
+    });
+});
+});
+  
+    </script>
+  </body>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Контактна інформація</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p><strong>Телефони:</strong></p>
+                <p>📞 +38 (093) 123-45-67</p>
+                <p>📞 +38 (097) 765-43-21</p>
+                <hr>
+                <p><strong>Соцмережі:</strong></p>
+                <p>
+                    <a href="https://facebook.com" target="_blank" class="btn btn-primary btn-sm">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="btn btn-danger btn-sm">Instagram</a>
+                    <a href="https://twitter.com" target="_blank" class="btn btn-info btn-sm">Twitter</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    align-self: flex-start;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    max-width: 350px; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#album-image {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+            
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Оформлення замовлення</h2>
+        
+        <div class="order-summary">
+            <img id="album-image" src="" alt="Альбом">
+            <h3 id="album-title"></h3>
+            <p id="album-price"></p>
+        </div>
+
+        <form id="order-form">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="address">Адреса доставки:</label>
+            <input type="text" id="address" required>
+
+            <button type="submit">Завершити замовлення</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const orderData = JSON.parse(localStorage.getItem("orderData"));
+
+            if (orderData) {
+                document.getElementById("album-image").src = orderData.image;
+                document.getElementById("album-title").textContent = orderData.title;
+                document.getElementById("album-price").textContent = "Ціна: " + orderData.price;
+            }
+
+            document.getElementById("order-form").addEventListener("submit", (e) => {
+                e.preventDefault();
+                
+                const orderDetails = {
+                    name: document.getElementById("name").value,
+                    phone: document.getElementById("phone").value,
+                    address: document.getElementById("address").value,
+                    album: orderData.title,
+                    price: orderData.price
+                };
+
+                localStorage.setItem("finalOrder", JSON.stringify(orderDetails));
+                window.location.href = "confirmation.html";
+            });
+        });
+    </script>
+
+</body>
+</html>
